@@ -1,0 +1,104 @@
+/*===========BASIC SETTINGS============*/
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    height:100vh;
+    overflow-y: hidden;
+    background:rgb(42, 39, 39);
+}
+/*==============END OF BASIC SETTINGS===========*/
+
+/*==============COUNTER CONTAINER==============*/
+.container{
+    display: flex;
+    position:relative;
+    justify-content: center;
+    padding:5em;
+}
+/*=============Box Counter=================*/
+.box{
+width: 814px;
+height: 100%;
+background: #F87429;
+border-radius: 52px;
+margin:0 auto;
+text-align:center;
+position:relative;
+transition: box-shadow .3s;
+padding:2em;
+}
+.box:hover{
+    box-shadow: 0 0 12px rgba(0, 0, 0,.8); 
+}
+.content{
+    position:relative;
+    top:15%;
+}
+button{
+width: 115px;
+height: 113px;
+background: rgb(67, 51, 247);
+color:#fff;
+border-radius: 50%;
+border: none;
+font-size:5em;
+transition: box-shadow .3s;
+}
+button:hover{
+    box-shadow: 0 0 12px rgba(67, 51, 247,.8); 
+}
+#counter{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 128px;
+line-height: 155px;
+color:#fff;
+}
+
+/*=============== Addition and subtraction signs =========*/
+#subtract , #add{
+    position: relative;
+}
+.line{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    background-color: #fff;
+    top:45%;
+    left: 20%;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+/*=========CIRCLES=============*/
+.circle{
+width: 178px;
+height: 154px;
+position:absolute;
+background-color: #9DEF6B;
+border-radius:50%;
+}
+.one{
+    z-index:2;
+    top: -50px;
+    left: -50px;
+}
+.two{
+    z-index:-1;
+    bottom:-50px;
+    left:-50px;
+}
+.three{
+    top:-50px;
+    right:-50px;
+    z-index:-1;
+}
+.four{
+    bottom:-50px;
+    right:-50px;
+}
+/*===============END OF COUNTER CONTAINER==============*/
