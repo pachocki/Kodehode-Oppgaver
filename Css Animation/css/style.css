@@ -1,0 +1,367 @@
+body{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin:0;
+    padding:0;
+    background-position:bottom;
+    position:relative;
+}
+.tree{
+    position: relative;
+    bottom: 21em;
+    left: 65em;
+    display: grid;
+    z-index:5;
+}
+
+.korona:hover{
+        animation: shake 0.5s;
+        animation-iteration-count:shake infinite;
+        cursor: pointer;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.pien{
+    width:10%;
+    
+}
+
+.korona{
+    width: 20%;
+    position: relative;
+    top: 30px;
+    right: 70px;
+}
+.car1{
+    position: absolute;
+    bottom: 3.2em;
+    -moz-animation:car1 10s  linear infinite;
+    -webkit-animation:car1 10s  linear infinite;
+    z-index:4;
+    cursor:pointer;
+}
+.car1:hover {
+        animation-play-state: paused;
+}
+@-moz-keyframes car1
+{
+	0%   {left:-25%;}
+	100% {left:100%;}
+} 
+@-webkit-keyframes car1
+{
+	0%   {left:-25%;}
+	100% {left:100%;}
+} 
+
+
+.car2{
+    position:absolute;
+    right:0;
+    bottom:6em;
+    z-index:3;
+    -moz-animation:car2 10s  linear infinite;
+    -webkit-animation:car2 10s  linear infinite;
+    cursor:pointer;
+}
+
+@-moz-keyframes car2
+{
+	0%   {right:-25%;}
+	100% {right:100%;}
+} 
+@-webkit-keyframes car2
+{
+	0%   {right:-25%;}
+	100% {right:100%;}
+} 
+.light{
+    position: relative;
+    width: 100%;
+    bottom: -230px;
+    left: 25px;
+
+}
+.street-light{
+    position:relative;
+    z-index:5
+}
+.bulb{
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 0, 0.571);
+    position: relative;
+    border-radius: 50%;
+    top: 10px;
+    left: -5px;
+    transition:2s;
+    cursor: pointer;
+}
+
+.bulb:hover{
+    background:yellow;
+    box-shadow: 0 0 20px rgb(236, 236, 3);
+}
+
+.aeroplane{
+    position:absolute;
+    left:-500px;
+    z-index:99;
+    top:0;
+    width:40%;
+    -moz-animation:aeroplane 10s  linear forwards;
+    -webkit-animation:aeroplane 10s  linear forwards; 
+    animation-delay: 5s;
+   
+}
+
+@-webkit-keyframes aeroplane
+{
+	0%   {top:20%;left:-25%;}
+	100% {top:0;left:100%;
+        display:none;
+        left: 100%;
+        overflow: hidden;
+        display: none;
+        visibility: hidden;}
+} 
+
+.sun {
+	opacity: 1;
+	box-shadow: 0px 0px 15px 3px yellow;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 1em;
+    left: 2em;
+	animation: sunpulse 2s alternate infinite;
+	border-radius: 50%;
+	background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
+    transition: 1s ease-in;
+    cursor: pointer;
+}
+.sun:hover{
+    transform: scale(1.2);
+}
+
+@keyframes sunpulse {
+	from {
+		box-shadow: 0 0 100px #ff0, 0 0 100px rgb(255, 255, 39);
+	}
+	to {
+		box-shadow: 0 0 25px #ff0, 0 0 75px rgb(255, 255, 30);
+	}
+}
+.pedastrian-light{
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    left: 50%;
+    bottom:2em;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top:1px;
+}
+.lights{
+    display:grid;
+    gap:3px;
+    position: relative;
+    bottom: 8.8em;
+    position: relative;
+    left: 27px;
+}
+.red{
+    background:rgba(255, 0, 0, 0.39);
+    cursor:pointer;
+    transition:1s ease-in;
+}
+.red:hover{
+    background:red;
+}
+.orange{
+    background:rgba(255, 166, 0, 0.382);
+    cursor:pointer;
+    transition:2s ease-in-out;
+}
+.orange:hover{
+    background:orange;
+}
+
+.green{
+    background:green;
+    animation: greenpuls 5s alternate infinite;
+}
+.pedastrian{
+    width: 70px;
+    position:relative;
+    bottom:-4em;
+}
+@keyframes greenpuls {
+	from {
+		box-shadow: 0 0 100px rgb(9, 255, 0), rgb(61, 255, 39);
+	}
+	to {
+		box-shadow: 0 0 25px rgb(0, 255, 8), 0 0 75px rgb(30, 255, 38);
+	}
+}
+.dog{
+    position: absolute;
+    z-index: 1;
+    bottom: 22%;
+    width: 5;
+    width: 5%;
+    right: 50%;
+    animation-name: dog;
+    -moz-animation:dog 10s  linear forwards;
+    -webkit-animation:dog 10s  linear forwards; 
+  }
+  
+  @keyframes dog {
+    0%   {right:50%; bottom:22%;}
+    25%  {right:60%; bottom:22%;}
+    50%  {right:70%; bottom:22%;}
+    85%  {right:87%; bottom:28%;}
+    100% {right:100%; bottom:28%;
+        overflow: hidden;
+        display: none;
+        visibility: hidden;}
+  }
+  .window{
+    display: inline-block;
+    position: relative;
+    bottom: 48em;
+    right: 2em;
+    z-index: 5;
+    right: -17em;
+    cursor: pointer;
+  }
+  .windmain{
+    width: 50px;
+    position: relative;
+    z-index: 2;
+    right:5px;
+  }
+  .windowafter{
+    display: none;
+    width: 50px;
+    right: 58px;
+    position: relative;
+    z-index: 99;
+    
+  }
+  .window:hover .windowafter{
+    display: inline;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+     }
+
+     to {
+          opacity: 1;
+     }
+}
+
+
+.balon{
+    width:80px;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    top:10px;
+    left:35%;
+    position: absolute;
+    z-index:2;
+}
+@keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+
+
+.birds{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left:-30%;
+    -moz-animation:fly 10s  linear infinite;
+    -webkit-animation:fly 10s  linear infinite; 
+    animation-delay: 5s;
+   
+}
+
+@-webkit-keyframes fly
+{
+	0%   {top:10px;left:-25%;}
+	100% {top:0;left:100%;}
+} 
+.woman{
+position: absolute;
+bottom: 120px;
+left:-30%;
+-moz-animation:walk 20s  linear infinite;
+-webkit-animation:walk 20s  linear infinite; 
+animation-delay: 5s;
+}
+.men{
+position: absolute;
+bottom: 120px;
+right:-30%;
+-moz-animation:walk1 20s  linear infinite;
+-webkit-animation:walk1 20s  linear infinite; 
+animation-delay: 1s;
+
+}
+.family{
+position: absolute;
+bottom: 120px;
+left:-30%;
+-moz-animation:walk 20s  linear infinite;
+-webkit-animation:walk 20s  linear infinite; 
+animation-delay: 1s;
+z-index:2;
+
+}
+
+@-webkit-keyframes walk
+{
+	0%   {bottom:120px;left:-25%;}
+	100% {bottom:120px;left:100%;}
+} 
+@-webkit-keyframes walk1
+{
+	0%   {bottom:120px;right:-25%;}
+	100% {bottom:120px;right:100%;}
+} 
