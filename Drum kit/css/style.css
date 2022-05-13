@@ -1,0 +1,281 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#171717;
+    font-family: 'Oswald', sans-serif;
+    max-height:100vh;
+}
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color:inherit;
+    
+}
+.title{
+    color:#a67f42;
+    text-align:center;
+    font-size:3em;
+   
+    
+}
+.main-container{
+    max-width:1100px;
+    max-height: 100vh;
+    margin:0 auto;
+   
+}
+.main-container::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    /* you can control opacity of noise  */
+    opacity: 0.03;  
+    z-index: 1000;
+    pointer-events: none;
+    background: url(../img/noise.gif) ;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height:100%;
+    text-align: center;
+    margin: 0 auto;
+    align-content: center;
+    overflow: hidden;
+    gap:2em;
+    color:#a67f42;
+}
+.card{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    cursor: pointer;
+    position:relative;
+    height:400px;
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: all .5s ease;
+    
+}
+.card1{
+    background-image: url("../img/system-of-a-down-2020.jpg");   
+}
+.card2{
+    background-image: url("../img/bonjovi.jpg");  
+
+}
+.card3{
+    background-image: url("../img/clash.jpg");  
+}
+
+
+.card:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.card-bottom{
+   margin:0 auto;
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    width:100%;
+    background:rgba(0, 0, 0, 0.811);
+    padding:10px 0 30px 0;
+
+}
+
+.text-animation{
+position:absolute;
+animation-name: rightToLeft;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation: rightToLeft 55s linear infinite;
+bottom:1em;
+color:#a67f42;
+font-size:4em;
+overflow:hidden;
+
+}
+
+@keyframes rightToLeft {
+0% {
+  transform: translateX(-110%);
+}
+100% {
+  transform: translateX(101%);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*GAME-WEBSITE*/
+.container {
+    display:flex;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heading{
+    background:#171717;
+    position:absolute;
+    z-index:2;
+    width:100%;
+    height:155px;
+    color:#a67f42;
+    text-align:center;
+    
+}
+.heading h1{
+    padding-top:40px;
+    font-size:3rem;
+    
+}
+
+.drums{
+   
+    display:flex;
+    flex-wrap:wrap;
+    border-radius:10px;
+    background:#171717;
+    flex-direction: row;
+    max-width:550px;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+     z-index:5;
+     bottom:5.5em;
+   
+    
+}
+.drum{
+    height:50px;
+    width:130px;
+    z-index:2;
+    border-radius:10px;
+    margin:1px auto;
+    font-size:1.2em;
+    font-weight:bold;
+   
+
+
+}
+.drum1{
+
+    background:rgb(173, 19, 19);
+ 
+
+}
+.drum2{
+    background:rgb(244, 248, 3);
+  
+
+}
+.drum3{
+    background:rgb(7, 53, 202);
+    
+
+}
+.drum4{
+    background:green;
+    
+
+}
+.drum5{
+    background:orange;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-top: 9px;
+    
+
+}
+
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+  }
+
+
+
+
+/* CSS */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #000;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#000 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #a67f42;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 2em;
+  z-index: 1000;
+  position: absolute;
+  bottom:1em;
+  right:2em;
+}
+
+.button-30:focus {
+  box-shadow: #000000 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    color:#a67f42;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #000000 0 3px 7px inset;
+  transform: translateY(2px);
+}
